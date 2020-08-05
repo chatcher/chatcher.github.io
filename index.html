@@ -1,8 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script>
+class AppRoot extends HTMLDivElement {
+}
+CustomElementRegistry.define('app-root', AppRoot, { extends : 'div' });
+</script>
 </head>
 <body>
-	<p>Hi</p>
+	<app-root>
+		<p wh-if="show">Visible</p>
+		<p wh-else>Hidden</p>
+	</app-root>
 </body>
 </html>
