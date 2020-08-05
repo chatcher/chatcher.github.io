@@ -2,21 +2,13 @@
 <html>
 <head>
 <script>
-class AppRoot extends HTMLDivElement {
-	show = true;
-	constructor() {
-		super();
-
-		window.snap = this;
-	}
-}
-customElements.define('app-root', AppRoot, { extends : 'div' });
+if (localStorage.getItem('token')) 
+	window.location('validate-token.html');
+else
+	window.location('login.html');
 </script>
 </head>
 <body>
-	<app-root>
-		<p wh-if="show">Visible</p>
-		<p wh-else>Hidden</p>
-	</app-root>
+	<p>Loading...</p>
 </body>
 </html>
