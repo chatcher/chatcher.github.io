@@ -3,6 +3,12 @@
 <head>
 <script>
 class AppRoot extends HTMLDivElement {
+	show = true;
+	constructor() {
+		super();
+
+		window.snap = this;
+	}
 }
 CustomElementRegistry.define('app-root', AppRoot, { extends : 'div' });
 </script>
